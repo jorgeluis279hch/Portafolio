@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de estado</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./icons/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <input type="checkbox" name="check-menu" id="check-menu">
+            <div id="logo-top" class="logo">
+                <span class="icon-home"></span>
+                <span class="txt">JORGE L.</span>
+            </div>
+            <div class="nav__icon">
+                <label for="check-menu"><span class="icon-menu"></span></label>
+            </div>
+            <div class="nav__links">
+                <a href="#inicio" lnk='/src/inicio.html' class="link">INICIO</a href="#">
+                <a href="#info-projects" lnk='/src/portafolio.html' class="link">PROYECTOS</a href="#">
+                <a href="#info-contact" lnk='/src/contacto.html' class="link">CONTACTO</a href="#">
+            </div>
+        </div>
+        <div class="sections">
+            <div id="inicio" class="main__section">
+                <div class="section">
+                    <div class="img">
+                        <img id="img__face" src="./img/cap3.jpg" alt="">
+                        <div class="title">George Herrera</div>
+                    </div>
+                    <div class="descrip">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem incidunt nemo assumenda, delectus maxime pariatur sequi ipsampraesentium itaque sed maiores eveniet labore. Quos iure dicta repudiandae exercitationem commodi architecto!
+                    </div>
+                </div>
+            </div>
+            <div class="info__main">
+                <div id="info-academica" class="title__info">Formacion academica</div>
+                <div class="info-descrip">
+                    <div class="list">
+                        <div class="sub">
+                            <div class="sub__head"><span class="icon-circle-right"></span>Secundaria</div>
+                            <div class="sublist">
+                                Colegio Simón Bolívar, Cusco, Perú <br> Educación secundaria, Quinto Superior</div>
+                        </div>
+                        <div class="sub">
+                          <div class="sub__head"><span class="icon-circle-right"></span>Superior</div>
+                          <div class="sublist">Instituto San Jose Oriol, Arequipa, Perú <br> Administración de Empresas
+                          </div>
+                        </div>
+                    
+                        <div class="sub">
+                          <div class="sub__head"><span class="icon-circle-right"></span>Cursos</div>
+                          <div class="sublist">Cursos de programación y diseño de sitios web <br>
+                             Curso de: HTML, CSS, JavaScript, PHP <br> Curso de programación básica en Java <br> Curso de programación Python, GO</div>
+                        </div>
+                        <div class="sub">
+                          <div class="sub__head"><span class="icon-circle-right"></span>Actualidad</div>
+                          <div class="sublist">Cursos de ReactJS y VueJS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info__projects">
+                <div id="info-projects" class="title__info">Proyectos</div>
+                <div class="projects-descrip">
+                    <div class="project__item">
+                        <div class="project__fill"><a href="#">link to project</a></div>
+                        <img class="project__img" src="./img/cap3.jpg" alt="" srcset="">
+                        <span>Proyector de fotos</span>
+                    </div>
+                    <div class="project__item">
+                        <div class="project__fill"><a href="#">link to project</a></div>
+                        <img class="project__img" src="./img/cap3.jpg" alt="" srcset="">
+                        <span>Generador Aleatorio</span>
+                    </div>
+                    <div class="project__item">
+                        <div class="project__fill"><a href="#">link to project</a></div>    
+                        <img class="project__img" src="./img/cap3.jpg" alt="" srcset="">
+                        <span>Sitio Web Simple</span>
+                    </div>
+                    <div class="project__item">
+                        <div class="project__fill"><a href="#">link to project</a></div>
+                        <img class="project__img" src="./img/cap3.jpg" alt="" srcset="">
+                        <span>Tic Tac Toe</span>
+                    </div>
+                </div>
+            </div>  
+            <div class="info__know">
+                <div id="info-know" class="title__info">Conocimiento informático</div>
+                <div class="barra__progres">
+                    <div class="progres">
+                      <h4 class="lang"><span class="icon-css3"></span>MS Office</h4>
+                      <div class="fill">
+                        <div class="fill__one"></div>
+                      </div>
+                    </div>
+                    <div class="progres">
+                      <h4 class="lang"><span class="icon-html-five2"></span>Figma</h4>
+                      <div class="fill">
+                        <div class="fill__two"></div>
+                      </div>
+                    </div>
+                    <div class="progres">
+                      <h4 class="lang"><span class="icon-html-five"></span>IntelliJ IDEA</h4>
+                      <div class="fill">
+                        <div class="fill__three"></div>
+                      </div>
+                    </div>
+                    <div class="progres">
+                      <h4 class="lang"><span class="icon-html-five"></span>Visual Studio</h4>
+                      <div class="fill">
+                        <div class="fill__four"></div>
+                      </div>
+                    </div>
+                  </div>
+            </div> 
+            <div class="info__contact">
+                <div id="info-contact" class="title__info">Contacto</div>
+                <div class="contact__descrip">
+                    <div class="formul">
+                        <form action="#">
+                            <input class="contact__input" type="mail" name="" id="contact__mail" placeholder="@email">
+                            <input class="contact__input" type="text" name="" id="contact__refer" placeholder="Asunto" >
+                            <textarea name="" id="contact__message" cols="45" rows="10" placeholder="mensage"></textarea>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social">
+            <div class="social__arrow-up" >
+                <a href="#logo-top"><span class="icon-arrow-up2"></span></a>
+                
+            </div>
+            <div class="social__icon">
+                <span class="icon-facebook"></span>
+            </div>
+            <div class="social__icon">
+                <span class="icon-twitter"></span>
+            </div>
+            <div class="social__icon">
+                <span class="icon-github"></span>
+            </div>
+            <div class="social__icon">
+                <span class="icon-whatsapp"></span>
+            </div>
+        </div> 
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>

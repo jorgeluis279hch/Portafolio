@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./icons/style.css">
+  <title>barras de progreso</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      /* min-width: 320px; */
+      background: linear-gradient(45deg, rgb(82, 173, 221), rgb(212, 76, 225));
+    }
+
+    .container {
+      padding: 20px;
+    }
+    .progres {
+      display: flex;
+      /* min-width: 320px; */
+      max-width: 400px;
+      margin: 15px auto;
+      
+      flex-wrap: wrap;
+      /* animation: progres alternate 1 3s; */
+    }
+    .lang {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      display: inline;
+      font-size: 1rem;
+      padding: 10px 5px;
+      background-color:#b9b9be;
+      width: 110px;
+      color: rgb(65, 62, 62);
+      cursor: pointer;
+      text-align: center;
+      user-select: none;
+    }
+    .lang span {
+      padding-right: 5px;
+    }
+    .lang:hover ~ .fill  {
+      max-width: 400px;
+    }
+    .fill {
+      max-width: 0;
+      overflow: hidden;
+      position: absolute;
+      margin-left: 110px;
+      width: 250px;
+      border: 1px solid rgb(80, 196, 196);
+      background-color: rgb(66, 65, 65);
+
+      transition: max-width .6s ease-in-out;
+    }
+    .fill__one,  .fill__two, .fill__three{
+      height: 37px;
+    }
+    .fill__one{
+      
+      width: 80%;
+      background-color: rgb(93, 180, 212);
+    }
+    .fill__two {
+      width: 70%;
+      background-color: rgba(240, 164, 23, 0.946);
+    }
+    .fill__three {
+      width: 65%;
+      background-color: rgba(243, 236, 35, 0.946);
+    }
+    @media screen and (max-width: 420px) {
+      .progres {
+        display: flex;
+        max-width: 400px;
+        margin: 15px auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
+      .lang {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+      }
+      .lang:hover ~ .fill {
+        max-height: 50px;
+      }
+      .fill {
+        position: relative;
+        height: 15px;
+        border: none;
+        max-height: 0;
+        width: 80%;
+        transition-property: max-width, max-heigth;
+        transition-duration: .6s;
+        margin: auto;
+      }
+    }
+    
+
+  </style>
+</head>
+<body>
+
+    <div class="barra__progres">
+      <div class="progres">
+        <h4 class="lang"><span class="icon-css3"></span>Css</h4>
+        <div class="fill">
+          <div class="fill__one"></div>
+        </div>
+      </div>
+      <div class="progres">
+        <h4 class="lang"><span class="icon-html-five2"></span>Html</h4>
+        <div class="fill">
+          <div class="fill__two"></div>
+        </div>
+      </div>
+      <div class="progres">
+        <h4 class="lang"><span class="icon-html-five"></span>Javascript</h4>
+        <div class="fill">
+          <div class="fill__three"></div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <main>
+
+  </main>
+</body>
+</html>
+
+
+<!-- barras de progreso -->
