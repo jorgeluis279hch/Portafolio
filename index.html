@@ -13,16 +13,15 @@
         <div class="navbar">
             <input type="checkbox" name="check-menu" id="check-menu">
             <div id="logo-top" class="logo">
-                <span class="icon-home"></span>
                 <span class="txt">JORGE L.</span>
             </div>
             <div class="nav__icon">
                 <label for="check-menu"><span class="icon-menu"></span></label>
             </div>
             <div class="nav__links">
-                <a href="#inicio" lnk='/src/inicio.html' class="link">INICIO</a href="#">
-                <a href="#info-projects" lnk='/src/portafolio.html' class="link">PROYECTOS</a href="#">
-                <a href="#info-contact" lnk='/src/contacto.html' class="link">CONTACTO</a href="#">
+                <a href="#inicio" lnk='/src/inicio.html' class="link"><span class="icon-power"></span>INICIO</a href="#">
+                <a href="#info-projects" lnk='/src/portafolio.html' class="link"><span class="icon-books"></span>PROYECTOS</a href="#">
+                <a href="#info-contact" lnk='/src/contacto.html' class="link"><span class="icon-address-book"></span>CONTACTO</a href="#">
             </div>
         </div>
         <div class="sections">
@@ -122,10 +121,21 @@
                 <div id="info-contact" class="title__info">Contacto</div>
                 <div class="contact__descrip">
                     <div class="formul">
-                        <form action="#">
-                            <input class="contact__input" type="mail" name="" id="contact__mail" placeholder="@email">
-                            <input class="contact__input" type="text" name="" id="contact__refer" placeholder="Asunto" >
-                            <textarea name="" id="contact__message" cols="45" rows="10" placeholder="mensage"></textarea>
+                        <form class="formul__f" action="#">
+                            <div id="email__input">
+                                <input class="contact__input" required type="mail" name="" id="contact__mail" >
+                                <span class="line-sub"></span>
+                                <label class="input__info"><span class="icon-mail4"></span>Email</label>
+                            </div>
+                            <div id="msg__input">
+                                <input class="contact__input" type="text" name="" id="contact__refer" required>
+                                <span class="line-sub"></span>
+                                <label class="input__info"><span class="icon-paragraph-left"></span>Asunto</label>
+                            </div>
+
+                            <textarea name="" id="contact__message" required cols="45" rows="10" placeholder="Mensaje"></textarea>
+                            <input id="btn-send" class="contact__input" type="submit" value="Enviar">
+                            
                         </form>
                     </div>
                 </div>

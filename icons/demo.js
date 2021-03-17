@@ -7,8 +7,9 @@ document.body.addEventListener("click", function(e) {
     if (target.tagName === "INPUT" &&
         target.getAttribute('class').indexOf('liga') === -1) {
         target.select();
+        
     }
-});
+}); 
 
 (function() {
     var fontSize = document.getElementById('fontSize'),
@@ -17,6 +18,7 @@ document.body.addEventListener("click", function(e) {
     function updateTest() {
         testDrive.innerHTML = testText.value || String.fromCharCode(160);
         if (window.icomoonLiga) {
+
             window.icomoonLiga(testDrive);
         }
     }
