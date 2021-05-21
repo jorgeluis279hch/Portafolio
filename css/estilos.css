@@ -23,16 +23,18 @@ textarea:focus {
     border: none;
 }
 .navbar {
-    position: static;
-    top:0px;
+    position: fixed;
+    top: 0px;
     display: flex;
     font-size: .7rem;
-    background-color:var(--blueColor);
+    background-color: var(--blueColor);
     padding: 0px 5%;
     justify-content: space-between;
     align-items: center;
     height: 50px;
     border-bottom: 1px solid var(--whiteColor);
+    width: 100%;
+    z-index: 150;
 }
 .navbar [class^='icon-'] {
     padding: 0px 5px;
@@ -83,38 +85,46 @@ textarea:focus {
 .section {
     display: flex;
     justify-content: center;
-    padding: 20px 5px;
+    padding: 35px 20px 20px 0px;
     flex-wrap: wrap;
     background-color: var(--whiteColor);
     color: var(--fontColorPlom);
-
 }
 
 .title, .txt .title__info {
     /* width: 100%; */
-    font-size: .8rem;
     text-align: center;
 }
 #img__face {
-    width: 120px;
-    height: 150px;
+    width: 210px;
+    height: 210px;
     margin:10px;
+    border-radius: 50%;
     min-width: 100px;
+    object-fit: cover;
+    filter: grayscale(10);
+    transition:all .3s;
+}
+.section:hover .img > #img__face {
+    filter: none;
+    filter: drop-shadow(1px 2px 3px black);
 }
 .img {
-    max-width: 170px;
+    margin: 0px 20px;
     flex-grow: 1;
 }
 .descrip {
     flex-grow: 2;
     max-width: 330px;
     text-align:justify;
+    font-style: oblique;
     padding: 10px;
+    line-height: 2rem;
 }
 
 .info__main {
     width: 100%;
-    height: 500px;
+    height: 620px;
 }
 
 
@@ -135,6 +145,7 @@ textarea:focus {
     width: 70%;
     flex-direction: column;
     position: relative;
+    /* font-style: oblique; */
     justify-content: center;
 }
 /* #info-academica {
@@ -177,26 +188,41 @@ textarea:focus {
 .sub__head { 
     color: white;
     font-size: 1rem;
-    padding: 0px 30px;
+    padding: 10px 40px;
     background: var(--blueColor);
+    margin-bottom: 1px;
     display: flex; 
 }
 .sub__head span {
     position: absolute;
     top:0;
     left:0;
-    padding: 3px;
+    padding: 13px;
     transition: all .5s;
 }
 .sub__head:hover {
     background-color: var(--blackColor);
 }
-
 .sublist {
+    display: flex;
     max-height: 0;
     overflow: hidden;
     position: static;
     transition: all .5s;
+}
+.sublist p {
+    margin-left: 20px;
+    font-style: italic;
+}
+.sublist__logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+.sublist .icon-udemy::before, .sublist .icon-vue-dot-js::before, .sublist .icon-react::before {
+    font-size: 5rem;
 }
 .sub {
     position: relative;
@@ -205,9 +231,10 @@ textarea:focus {
     max-width: 500px;
 }
 .sub:hover > .sublist {
-    max-height: 300px;
-    line-height: 1.5;
-    padding: 20px 40px;
+    max-height: 200px;
+    line-height: 1.5rem;
+    height: 170px;
+    padding: 20px;
     border:1px solid var(--blackColor); 
 }
 .sub:hover > .sub__head span.icon-circle-right{
@@ -229,7 +256,6 @@ textarea:focus {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .project__item {
     max-width: 250px;
     height: 310px;
@@ -262,7 +288,7 @@ textarea:focus {
     align-items: center;
     justify-content: space-around;
     position: absolute;
-    background-color: rgb(68, 66, 66);
+    background-color: rgb(68 123 139 / 84%);
     height: 100%;
     width: 100%;
     border-radius:.5rem;
@@ -275,6 +301,7 @@ textarea:focus {
     width: 95%;
     height: 250px;
     /* position: absolute; */
+    object-fit: cover;
     margin:5px;
     border-radius: .5rem;
 }
@@ -296,17 +323,18 @@ textarea:focus {
     /* animation: progres alternate 1 3s; */
 }
 .lang {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: monospace;
     display: inline;
-    font-size: .8rem;
-    padding: 10px 5px;
-    background-color:#b9b9be;
     width: 150px;
     color: rgb(65, 62, 62);
     cursor: pointer;
-    text-align: center;
     user-select: none;
 }
+
+.lang:hover {
+    box-shadow:inset 0px -1px 0px var(--blueColor);
+}
+
 .lang span {
     padding-right: 5px;
 }
@@ -326,25 +354,45 @@ textarea:focus {
 
     transition: max-width .6s ease-in-out;
 }
-.fill__one,  .fill__two, .fill__three, .fill__four{
+.fill__css,  .fill__html, .fill__js, .fill__java, .fill__php, .fill__py, .fill__react, .fill__laravel, .fill__jquery{
     height: 100%;
     background-color: var(--blueColor);
 }
-.fill__one{
+.fill__css{
     width: 80%;
 }
-.fill__two {
-    width: 70%;
+.fill__html {
+    width: 90%;
     /* background-color: rgba(240, 164, 23, 0.946); */
 }
-.fill__three {
+.fill__js {
+    width: 75%;
+    /* background-color: rgba(243, 236, 35, 0.946); */
+}
+.fill__py{
     width: 65%;
     /* background-color: rgba(243, 236, 35, 0.946); */
 }
-.fill__four{
+.fill__java{
+    width: 60%;
+    /* background-color: rgba(243, 236, 35, 0.946); */
+}
+.fill__php{
     width: 50%;
     /* background-color: rgba(243, 236, 35, 0.946); */
 }
+
+.fill__laravel{
+    width: 30%;
+}
+.fill__react{
+    width: 25%;
+}
+.fill__jquery{
+    width: 50%;
+}
+
+
 
 #info-know {
     text-align: center;
@@ -482,22 +530,27 @@ textarea:focus {
 .social__icon {
     padding: 10px;
 }
-
-.social__arrow-up {
-    height: 100%;
-    align-self: center;
-    position: absolute;
-    left: 0;
-    padding: 10px;
+div.social__arrow-up > a > span::before {
+    color: var(--whiteColor);
 }
-.social__arrow-up a {
+.icon-hurriyetemlak {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    padding: 10px;
+    background-color: #2ba2da;
+    border-radius: 5px
+}
+.icon-hurriyetemlak a {
     padding: 5px;
 }
 
 .nav__icon, #check-menu{
     display: none;
 }
-
+.nav__icon .icon-codefactor::before, .icon-hurriyetemlak::before  {
+    color: var(--whiteColor) !important;
+}
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -512,7 +565,7 @@ textarea:focus {
 @media screen and (max-width: 460px) {
     .navbar {
         display: flex;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
     .progres {
         display: flex;
@@ -522,13 +575,14 @@ textarea:focus {
         flex-wrap: wrap;
     }
     .img {
-        max-width: 135px;
+        max-width: 230px;
     }
 
     .lang {
         width: 80%;
         margin: auto;
         text-align: center;
+
     }
     .lang:hover ~ .fill {
         max-height: 50px;
