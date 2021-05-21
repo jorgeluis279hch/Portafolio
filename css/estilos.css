@@ -4,6 +4,7 @@
     --whiteColor:rgba(242, 252, 242, 0.85);
     --fontColorPlom:#504f53;
     --shadowColor:#6e7074ab;
+    --bg-color:rgb(37 50 55);
 }
 body {
     overflow: auto;
@@ -27,7 +28,7 @@ textarea:focus {
     top: 0px;
     display: flex;
     font-size: .7rem;
-    background-color: var(--blueColor);
+    background:linear-gradient(45deg, var(--bg-color), var(--blueColor));
     padding: 0px 5%;
     justify-content: space-between;
     align-items: center;
@@ -90,7 +91,9 @@ textarea:focus {
     background-color: var(--whiteColor);
     color: var(--fontColorPlom);
 }
-
+.txt {
+    margin: 0px 10px;
+}
 .title, .txt .title__info {
     /* width: 100%; */
     text-align: center;
@@ -213,6 +216,10 @@ textarea:focus {
 .sublist p {
     margin-left: 20px;
     font-style: italic;
+}
+.logo {
+    display:flex;
+    align-items: center;
 }
 .sublist__logo {
     width: 100px;
